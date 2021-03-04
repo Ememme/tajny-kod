@@ -23,10 +23,9 @@ buttons.forEach(button =>
 
 function checkCode(array) {
   if (array.length < 4) {
-    secretCode.push(event.target.innerHTML);
+    array.push(event.target.innerHTML);
   } else if (array.length = 4) {
-    console.log(array.join(""));
-    return array.join(" ");
+    return array
   }
 }
 
@@ -35,8 +34,8 @@ function resetDisplay() {
   secretCode = [];
 }
 
-function saveCode(array) {
+function saveCode() {
   if (saveButton) {
-    display.innerHTML = secretCode;
+    display.innerHTML = secretCode.join('');
   }
 }
